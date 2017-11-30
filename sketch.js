@@ -1,6 +1,6 @@
 function setup(){
-  recur("3*pow(k,3)",13,12);
-  recur("4",25,11)
+  recur("3*k",2,11);
+  recur("pow(k,3)",1,11);
 }
 
 function draw(){
@@ -13,8 +13,8 @@ function recur(inc,u0,un){
   var end = un;
 
   for(var i = 0; i<un; i++){
-    var newInc = inc.replace(/k/, 'i+1');
-    //console.log(newInc);
+    var newInc = inc.replace(/k/, '(i+1)');
+    console.log(newInc);
     newInc = eval(newInc);
 
     newInt += newInc;
